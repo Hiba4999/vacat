@@ -1,0 +1,585 @@
+* {
+    color: rgba(19, 7, 65, 1);
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+/* General styling for the header and navbar */
+.header {
+    width: 100%;
+    margin: 0;
+}
+#email{
+cursor: pointer;
+position: absolute;
+margin-left: 220px;
+margin-top:5px;
+} 
+
+/* Navbar structure */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 130px;
+    width:100%;
+}
+
+/* Logo styling */
+#logo {
+    max-width: 320px;
+    height: auto;
+    margin-left: 30px;
+}
+
+
+/* Navbar items (the paragraphs) */
+.navbar-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    transition: color 0.3s ease;
+    position:relative;
+} 
+.navbar-items a{
+    display: inline-block; /* ✅ Fixes the underline width to the text */
+  position: relative;    /* Needed for ::after positioning */
+
+    text-decoration: none;
+}
+.navbar-items a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #0d0d3f;
+  transition: width 0.3s ease;
+}
+
+/* Show underline when hovered */
+.navbar-items a:hover::after {
+  width: 100%;
+}
+
+/* Keep underline when the link is active (clicked) */
+.navbar-items a.active::after {
+  width: 100%;
+}
+
+
+#login {
+    height: 40px;
+    width: 100px;
+    border-color: rgba(19, 7, 65, 1);
+    margin-right: 50px;
+    background-color: white;
+    border-radius: 20px;
+    font-weight: 500;
+    border-width: 1px;
+    position: relative;
+    cursor: pointer;
+}
+
+#login:hover {
+    background-color: lightgray;
+    border-color: cornflowerblue;
+}
+
+
+/* Second navbar using flex */
+.navbar2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(68, 138, 247, 1);
+    padding: 10px;
+    gap: 60px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Style for all nav items */
+.navbarelement {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    position: relative;
+    padding: 5px;
+    transition: font-weight 0.3s ease;
+}
+
+/* Hover effect */
+.navbarelement:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+/* Active link style */
+.navbarelement.active {
+    font-weight: bold;
+}
+
+.navbarelement.active::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+/*1st part after the navbars*/
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 1200px;          /* Or any fixed width */
+    margin: 0 auto;         /* This will center it horizontally */
+    padding: 0 20px;        /* Optional: Adds internal spacing */
+}
+
+#dreamjob {
+    min-width: 480px;
+    min-height: 350px;
+    
+}
+#salesmanager {
+    min-width: 550px;
+    height: 480px;
+    }
+    #button{
+    font-size:normal;
+     background-color: rgba(68, 138, 247, 1);
+      color:white;
+      border-radius: 60px;
+      height:65px;
+      border:none;
+      width:400px;
+      margin-top: 20px;
+      font-size: large;
+      cursor: pointer;
+    }
+    #button:hover{
+        background-color: blue;
+    }
+/*why us heading*/
+#option1{
+        font-family:Arial, Helvetica, sans-serif;
+       font-size: xx-large;
+        font-weight:bolder;
+        display: flex;
+    align-items: center; 
+    justify-content:center; 
+    background-color:rgba(245, 244, 244, 1);
+     height: 170px;
+     margin-top: 80px;
+     width:100%;
+    }
+    /* 4 options*/
+    #whyus {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
+        justify-content:space-around;
+       margin: 0 50px;
+        gap: 40px;
+        width:100;
+    }
+    .images {
+        width: 30px;
+        height: 30px;
+        margin-top: 100px;
+    }
+    /*pricing heading*/
+    #option2{
+        background-color:rgba(245, 244, 244, 1) ;
+        height:220px;
+        margin-top: 140px;
+        display: flex;
+        align-items: center; 
+        justify-content:center;
+        flex-direction: column;
+        width:100%px;
+       
+    }
+    .pricing{
+        display: flex;
+        align-items: center; 
+        justify-content:center;
+        font-family:Arial, Helvetica, sans-serif;
+           font-size:xx-large;
+            font-weight:bolder;
+            margin-top: 40px;
+    }
+    #sec{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+     margin-bottom: 10px;
+         width: 100%;
+         max-width: 500px;
+         height: auto;
+ 
+ }
+ /*select packae heading*/
+ #line{
+        font-family: Poppins;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 100px;
+    width:100%;
+    }
+    #line2{
+        font-family: Poppins;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+    width:100%
+    }
+    /* 3 packages valaible*/
+    #packages{
+    margin-top: 120px;
+    gap:10px;
+    display: flex;
+    align-items: center; 
+    justify-content:space-between;
+    margin: 0 60px;
+}
+#contentbox {
+    position:absolute;
+    top:0%; 
+    left: 760px;
+    border-radius: 2px;
+    box-sizing: border-box; 
+    background-color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    border:none; 
+    width: 370px;
+    height: 720px;
+}
+#packages{
+   display: flex;
+   align-items: center; 
+  position:relative;
+  margin-top:30px;
+  position:absolute;
+margin-top: 130px;
+}
+.contentbo{
+   border:none;
+   border-radius: 2px;
+   box-sizing: border-box; 
+   background-color:white;
+   font-family: Arial, Helvetica, sans-serif;
+   border: 2px solid black; 
+   width: 370px;
+   height: 800px;
+   }
+   .contentboxe{
+    border:none;
+    border-radius: 2px;
+    box-sizing: border-box; 
+    background-color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid black; 
+    width: 370px;
+    height: 800px;
+    margin-left:50px;
+    }
+    .contentboxes{
+        border:none;
+        border-radius: 2px;
+        box-sizing: border-box; 
+        background-color:white;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 2px solid black; 
+        width: 370px;
+        height: 800px;
+        margin-left:50px;
+        }
+/*how it works*/
+#option3 {
+    background-color: rgba(245, 244, 244, 1);
+    height: 200px;
+    margin-top: 1050px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#itworks {
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.itwork {
+    font-size: 16px;
+    text-align: center;
+    margin: 2px;
+}
+/*six steps */
+#boxes {
+    margin-top: 100px;
+    padding: 20px 60px;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    width:100%;
+}
+
+.sixsteps {
+    background-color: rgba(245, 244, 244, 1);
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px; /* Optional: Adds rounded corners */
+}
+#button2{
+    font-size:normal;
+     background-color: rgba(68, 138, 247, 1);
+      color:white;
+      border-radius: 60px;
+      height:55px;
+      border:none;
+      width:300px;
+      margin-top: 60px;
+      font-size: large;
+      cursor: pointer;
+}
+#button2:hover{
+    background-color: blue;
+}
+#buttoncontainer{
+      display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;
+}
+/* writer part */
+#writerpart{
+    margin-top: 160px;
+    gap:20px;
+    padding:0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width:100%;
+}
+#ourWriters{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+#writterimg{
+    width: 450px;
+    height: 300px;
+}
+/* bog heading */
+#option4{
+        background-color:rgba(245, 244, 244, 1) ;
+        height:180px;
+        margin-top: 80px;
+        display: flex;
+        align-items: center; 
+        justify-content:center;
+        flex-direction: column;
+        width:100%;
+    }
+#blog{
+    margin-top: 30px;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+/* 2 aline pics */
+#images2 {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: row;
+    gap: 200px;
+    padding: 60px 20px;
+    width: 100%;
+}
+
+#box1, #box2 {
+    width: 450px;
+    height: auto;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+}
+/* meeting pic */
+#meetingpic{
+    width: 100%;
+height:auto;
+padding: 0 70px;
+margin-top: 100px;
+display:block;
+}
+#paragraph{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 90px;
+    flex-direction: column;
+    margin-bottom: 140px;
+    width:100%;
+}
+#innerline{
+    font-size: xx-large;
+}
+/* form part */
+
+#backgroundimg {
+    width:1250px;
+    height:750px; 
+    padding: 20px 20px;
+    display:block; 
+
+}
+#contentbox {
+    position:absolute;
+    top:0%; 
+    left: 760px;
+    border-radius: 2px;
+    box-sizing: border-box; 
+    background-color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    border:none; 
+    width: 370px;
+    height: 720px;
+}
+#fillingoptions{
+    display: flex;
+        align-items: center; 
+        gap: 10px;
+        margin-bottom: 10px;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+  #contentbutton{
+cursor: pointer;
+ border-radius: 20px;
+ height:40px;
+ width:200px;
+ margin-top: 40px;
+ margin-left:70px;
+ background-color: rgba(68, 138, 247, 1);
+ color:white;
+border: none;
+}
+
+#lastpart{
+    width:100%;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+  .accordion {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 100px;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+  }
+
+  .accordion-header {
+    background-color: #f1f1f1;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+
+  .accordion-header:hover {
+    background-color: #e0e0e0;
+  }
+
+  .accordion-content {
+    padding: 15px;
+    font-size: 16px;
+    display: none; /* Hide content by default */
+  }
+
+  /* Toggle content when active */
+  .active .accordion-content {
+    display: block;
+  }
+#footerpart{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     flex-direction: row;
+}
+  .footer{
+    background-color: rgba(245, 244, 244, 1);
+    height:auto;
+    margin-top:100px;
+    width:100%;
+   }        
+   #footerleft{
+      margin-left: 80px;
+   }                                                  
+.custom-icon{
+   font-size: large;
+   margin-left:10px;
+}
+#user-input{
+   margin-top:15px;
+   background-color:lightgray ;
+   border: none;
+   width:240px;
+   height:30px;
+
+}
+#footeremail{
+   display: flex;
+       align-items: center; 
+      position:relative;
+}
+#file{
+   text-align: center;
+   margin-left: 20px;
+   margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
